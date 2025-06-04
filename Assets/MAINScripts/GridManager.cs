@@ -1,5 +1,4 @@
-﻿// ===== 1. GridManager.cs =====
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -13,7 +12,7 @@ public struct TileData
     public TileType type;
     public RoadType roadType;
     public GameObject currentObject;
-    public GameObject buildingObject; // НОВИЙ: окремо зберігаємо будинок
+    public GameObject buildingObject; // окремо зберігаємо будинок
     public BuildingData buildingData;
 
     public bool IsEmpty => type == TileType.Ground && currentObject != null;
@@ -51,7 +50,7 @@ public class GridManager : MonoBehaviour
     [Header("Prefabs")]
     [SerializeField] private GameObject groundTilePrefab;
     [SerializeField] private GameObject[] roadPrefabs; // 5 типів доріг
-    [SerializeField] private GameObject concreteTilePrefab; // НОВИЙ ПРЕФАБ пластини бетонної під будівлею
+    [SerializeField] private GameObject concreteTilePrefab; // префаб пластини бетонної під будівлею
 
     [Header("Building Configs")]
     [SerializeField] private BuildingConfig[] availableBuildings;
@@ -194,7 +193,6 @@ public class GridManager : MonoBehaviour
         buildingParent.parent = transform;
     }
 
-    // ===== INPUT HANDLING =====
     private void HandleInput()
     {
         if (mouse == null) return;
@@ -264,7 +262,6 @@ public class GridManager : MonoBehaviour
         return Vector2Int.one * -1;
     }
 
-    // ===== PREVIEW SYSTEM =====
     private void UpdatePreview()
     {
         Vector2Int gridPosition = GetGridPositionFromMouse();
@@ -385,7 +382,6 @@ public class GridManager : MonoBehaviour
         }
     }
 
-    // ===== PUBLIC METHODS FOR UI =====
     public void SetBuildMode(BuildMode mode, BuildingConfig building = null)
     {
         currentMode = mode;
@@ -553,7 +549,7 @@ public class GridManager : MonoBehaviour
         OnTileChanged?.Invoke(new Vector2Int(x, z), TileType.Ground);
     }
 
-    // ВИПРАВЛЕНИЙ метод видалення будинку
+    // метод видалення будинку
     private void RemoveBuildingOnly(int originX, int originZ, Vector2Int size)
     {
         Debug.Log($"Removing building at ({originX}, {originZ}) size {size.x}x{size.y}");

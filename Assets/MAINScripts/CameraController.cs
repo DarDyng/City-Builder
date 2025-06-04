@@ -22,7 +22,7 @@ public class CameraController : MonoBehaviour
     private Camera cam;
     private Plane dragPlane;
 
-    // Посилання на компоненти нової системи вводу
+    // Посилання на компоненти системи вводу
     private Mouse mouse;
 
     void Start()

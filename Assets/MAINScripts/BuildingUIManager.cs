@@ -1,4 +1,3 @@
-// ===== BuildingUIManager.cs - Адаптований під ваші файли =====
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
@@ -59,7 +58,7 @@ public class BuildingUIManager : MonoBehaviour
     {
         if (buildingMenuManager != null)
         {
-            // Відкриваємо меню ОДРАЗУ, без перевірки режиму
+            // Відкриваємо меню 
             buildingMenuManager.OpenMenu();
 
             // Скасовуємо поточний режим, щоб користувач міг вибрати новий будинок

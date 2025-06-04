@@ -9,7 +9,7 @@ public class CityBoundary : MonoBehaviour
 
     [Header("Visual Settings")]
     [SerializeField] private Color boundaryColor = new Color(0.5f, 0.5f, 1f, 0.5f); // Напівпрозорий блакитний
-    [SerializeField] private Material boundaryMaterial; // Опціонально власний матеріал
+    [SerializeField] private Material boundaryMaterial; 
 
     [Header("References")]
     [SerializeField] private GridManager gridManager;
@@ -56,7 +56,7 @@ public class CityBoundary : MonoBehaviour
         CreateWall("West", new Vector3(0, boundaryHeight / 2f, gridHeight * tileSize / 2f),
                    new Vector3(boundaryThickness, boundaryHeight, gridHeight * tileSize));
 
-        // Опціонально: створюємо стовпчики на кутах
+        // створюємо стовпчики на кутах
         CreateCornerPosts();
 
         Debug.Log("Межа міста створена!");
