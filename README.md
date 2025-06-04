@@ -304,5 +304,5 @@ Vector2Int gridPosition = GetGridPositionFromMouse();
 ## Screenshots
 
 ![Головне меню](Screenshots/main_menu.png)
-![Дороги з автомобілями](Screenshots/road with cars.png)
+![Дороги з автомобілями](Screenshots/roads_with_cars.png)
 ![Місто](Screenshots/city.png)
