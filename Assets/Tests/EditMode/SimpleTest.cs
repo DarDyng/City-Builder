@@ -2,9 +2,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 
-/// <summary>
-/// Більш складні тести для логіки City Builder
-/// </summary>
+/// Тести для логіки City Builder
 public class CityBuilderLogicTests
 {
     // ===== ПРОСТИЙ ТЕСТ ДЛЯ ПОЧАТКУ =====
@@ -168,7 +166,7 @@ public class CityBuilderLogicTests
         Debug.Log($"✅ Прозорий колір: A={transparentColor.a}");
     }
 
-    // ===== НОВИЙ ТЕСТ: ДИСТАНЦІЯ МІЖ ТОЧКАМИ =====
+    // ===== ДИСТАНЦІЯ МІЖ ТОЧКАМИ =====
     [Test]
     public void Distance_Calculation_BetweenTwoPoints()
     {
@@ -192,7 +190,7 @@ public class CityBuilderLogicTests
         Debug.Log("✅ Відстань обчислена правильно!");
     }
 
-    // ===== НОВИЙ ТЕСТ: РОБОТА З СПИСКАМИ =====
+    // ===== РОБОТА З СПИСКАМИ =====
     [Test]
     public void List_Operations_WorkCorrectly()
     {
@@ -222,7 +220,7 @@ public class CityBuilderLogicTests
         Debug.Log($"✅ Фінальний список: [{string.Join(", ", buildings)}]");
     }
 
-    // ===== НОВИЙ ТЕСТ: ПЕРЕВІРКА МЕНЮ БУДИНКІВ =====
+    // ===== ПЕРЕВІРКА МЕНЮ БУДИНКІВ =====
     [Test]
     public void BuildingMenu_Logic_WorksCorrectly()
     {
@@ -255,7 +253,7 @@ public class CityBuilderLogicTests
         Debug.Log($"✅ Найбільший: {largest.name} ({largest.size.x}x{largest.size.y})");
     }
 
-    // ===== НОВИЙ ТЕСТ: СИМУЛЯЦІЯ ЧАСУ =====
+    // ===== СИМУЛЯЦІЯ ЧАСУ =====
     [Test]
     public void Time_Simulation_WorksCorrectly()
     {
@@ -289,7 +287,7 @@ public class CityBuilderLogicTests
         Debug.Log($"✅ Фінальний час: {currentGameTime:F3}s (очікувано: {expectedTime:F3}s)");
     }
 
-    // ===== НОВИЙ ТЕСТ: СКЛАДНА ЛОГІКА ТРАФІКУ =====
+    // ===== СКЛАДНА ЛОГІКА ТРАФІКУ =====
     [Test]
     public void Traffic_Logic_CalculatesCorrectPath()
     {
@@ -385,7 +383,7 @@ public class CityBuilderLogicTests
         );
     }
 
-    // ===== НОВІ HELPER МЕТОДИ =====
+    // ===== HELPER МЕТОДИ =====
 
     // Mock клас для імітації будинку
     public class MockBuilding
